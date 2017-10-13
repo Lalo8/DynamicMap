@@ -46,11 +46,12 @@ a {
 color: white;
 }
 nav.navbar{
-  background-color: #34C6C9;
+  background-color: #FFDF0A;
 }
 .navbar-brand h1 {
   font-size: 30px;
-  color: #AC583B;
+
+  color: white;
 }
 
 
@@ -69,7 +70,7 @@ nav.navbar{
   background-color: #D11651;
 }
 #searchcountry {
-  background-color: #AC583B;
+  background-color: #634afb;
 }
 #searchregion {
   background-color: #634afb;
