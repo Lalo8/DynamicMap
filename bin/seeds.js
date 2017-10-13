@@ -40,7 +40,6 @@ const incubator1 = new Organization({
 		},
 	category: 'incubator',
 	status: 'accepted',
-	ownerId: "59de0ff3969e5e08382e0de9",
 	location: { type: "Point", coordinates: [ 18.4551591, -33.9353179] }
 });
 
@@ -59,7 +58,6 @@ const incubator2 = new Organization({
 		},
 	category: 'incubator',
 	status: 'pending',
-	ownerId: "59de0ff3969e5e08382e0de9",
 	location: { type: "Point", coordinates: [ 36.7908265, -1.2981487] }
 });
 
@@ -78,7 +76,6 @@ const incubator3 = new Organization({
 		},
 	category: 'incubator',
 	status: 'accepted',
-	ownerId: "59de0ff3969e5e08382e0de9",
 	location: { type: "Point", coordinates: [ 36.805311, -1.2702478] }
 });
 
@@ -97,7 +94,6 @@ const incubator4 = new Organization({
 		},
 	category: 'incubator',
 	status: 'pending',
-	ownerId: "59de0ff3969e5e08382e0de9",
 	location: { type: "Point", coordinates: [ 7.4480174, 9.0389314] }
 });
 
@@ -116,7 +112,6 @@ const startup1 = new Organization({
 		},
 	category: 'startup',
 	status: 'accepted',
-	ownerId: "59de0ff3969e5e08382e0de9",
 	location: { type: "Point", coordinates: [ 31.1914344, 30.0526922] }
 });
 
@@ -135,71 +130,26 @@ const startup2 = new Organization({
 		},
 	category: 'startup',
 	status: 'accepted',
-	ownerId: "59de0ff3969e5e08382e0de9",
 	location: { type: "Point", coordinates: [ 39.2655765, -6.7850744] }
 });
 
+Promise.all([admin1.save(), admin2.save()]).then(admins => {
+	const [admin1, admin2] = admins
+	incubator1.ownerId = admin1._id;
+	incubator2.ownerId = admin2._id;
+	incubator3.ownerId = admin2._id;
+	incubator4.ownerId = admin2._id;
+	startup1.ownerId = admin1._id;
+	startup2.ownerId = admin2._id;
 
-User.create(admin1, (err, user) => {
-	if (err) {
-	throw err;
-	}
-	console.log(user);
-	mongoose.connection.close();
-});
+	Promise.all([
+		incubator1.save(),
+		incubator2.save(),
+		incubator3.save(),
+		incubator4.save(),
+		startup1.save(),
+		startup2.save()
+	]).then(() => mongoose.connection.close())
+})
 
-User.create(admin2, (err, user) => {
-	if (err) {
-	throw err;
-	}
-	console.log(user);
-	mongoose.connection.close();
-});
 
-Organization.create(incubator1, (err, organization) => {
-	if (err) {
-	throw err;
-	}
-	console.log(organization);
-	mongoose.connection.close();
-});
-
-Organization.create(incubator2, (err, organization) => {
-	if (err) {
-	throw err;
-	}
-	console.log(organization);
-	mongoose.connection.close();
-});
-
-Organization.create(incubator3, (err, organization) => {
-	if (err) {
-	throw err;
-	}
-	console.log(organization);
-	mongoose.connection.close();
-});
-
-Organization.create(incubator4, (err, organization) => {
-	if (err) {
-	throw err;
-	}
-	console.log(organization);
-	mongoose.connection.close();
-});
-
-Organization.create(startup1, (err, organization) => {
-	if (err) {
-	throw err;
-	}
-	console.log(organization);
-	mongoose.connection.close();
-});
-
-Organization.create(startup2, (err, organization) => {
-	if (err) {
-	throw err;
-	}
-	console.log(organization);
-	mongoose.connection.close();
-});
