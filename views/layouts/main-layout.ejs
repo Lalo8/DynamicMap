@@ -23,16 +23,13 @@
 				</button>
 			</div>
 
-			<div id="navMenuDropping" class="navbar-menu is-warning">
+			<div id="navMenuDropping" class="navbar-menu">
 				<div class="navbar-end">
+					<a href="/organizations" class="navbar-item">Details of all organizations </a>
 					<% if (!user) { %>
-					<div class="navbar-item">
 						<a href="/login" class="navbar-item" >Login</a>
-					</div>
-
-					<div class="navbar-item">
 						<a href="/signup" class="navbar-item">Signup</a>
-					</div>
+
 					<% } %>
 					<% if (user) { %>
 						<div class="navbar-item has-dropdown is-hoverable" style="margin-left:20px">
@@ -47,9 +44,7 @@
 							<a href="/logout" class="navbar-item">Logout</a>
 							</div>
 					<% } %>
-					<div class="navbar-item">
-						<a href="/organizations" class="navbar-item">Details of all organizations </a>
-					</div>
+
 				</div>
 			</div>
 		</div>
