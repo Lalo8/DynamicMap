@@ -4,7 +4,9 @@ const bcryptSalt     = 10;
 const User = require('../models/user');
 const Organization = require('../models/organization');
 
-mongoose.connect("mongodb://localhost/dynamic-map");
+mongoose.connect(process.env.MONGODB_URI, {
+  	useMongoClient: true,
+  });
 const salt = bcrypt.genSaltSync(bcryptSalt);
 const encryptedPass1 = bcrypt.hashSync("africa", salt);
 const encryptedPass2 = bcrypt.hashSync('ukraine', salt);
