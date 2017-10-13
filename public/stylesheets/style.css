@@ -41,11 +41,16 @@ a {
   padding: 15px;
 
 }
+
+.navbar h1 a {
+color: #754830;
+}
 nav.navbar{
   background-color: #FFE528;
 }
 .navbar-brand h1 {
   font-size: 30px;
+  color: #AC583B;
 }
 
 
