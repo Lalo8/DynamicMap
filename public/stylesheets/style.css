@@ -11,7 +11,8 @@ title{
   }
 
   body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family:'Covered By Your Grace', cursive;
+  font: 14px,'Covered By Your Grace','Lucida Grande', Helvetica, Arial, sans-serif;*/
   background-color: white;
   height: 100%;
   margin: 0;
@@ -21,11 +22,10 @@ title{
 a {
   color: #00B7FF;
 }
-.container {
-  margin-left: 25%;
-  margin-right: 25%;
-}
 
+span.icon.is-small{
+  margin-right: 5px;
+}
 /*********navbar/sidebar*********/
 
 /*.sidebar{
@@ -50,7 +50,7 @@ nav.navbar{
 }
 .navbar-brand h1 {
   font-size: 30px;
-
+ font: 'lucida Grande'
   color: white;
 }
 
@@ -126,6 +126,9 @@ font-size: 13px;
   margin-bottom: 15px;
 
 }
+.title {
+  text-align: center;
+}
 .title p{
   text-align: center;
   font-size: 30px;
@@ -167,6 +170,16 @@ font-size: 13px;
 }
 
 /*******Requests*******/
+.titlenew {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 45px;
+}
+.subtitlenew {
+  font-size: 30px;
+  text-align: center;
+  margin: 10px;
+}
 
 .titlerequest h2 {
 font-size: 40px;
@@ -181,7 +194,7 @@ margin: 10px;
 }
 
 .requestdetails {
-  border: 3px solid grey;
+  border: 3px solid #FEDC63;
     border-radius: 30px;
     padding: 20px;
     font-size: 18px;
