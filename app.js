@@ -14,7 +14,7 @@ const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
 
-mongoose.connect('mongodb://localhost/dynamic-map', {
+mongoose.connect('mongodb://heroku_w3bxd9nq:jafg9bm8l4t86d5ff3bch8i0td@ds119685.mlab.com:19685/heroku_w3bxd9nq', {
 	useMongoClient: true,
 });
 
