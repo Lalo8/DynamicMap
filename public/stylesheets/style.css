@@ -11,12 +11,18 @@ title{
   }
 
   body {
-  font-family:'Covered By Your Grace', cursive;
-  font: 14px,'Covered By Your Grace','Lucida Grande', Helvetica, Arial, sans-serif;*/
+  font: 14px,'Lucida Grande', Helvetica, Arial, sans-serif;*/
   background-color: white;
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+.catchy {
+font-family: 'Covered By Your Grace', cursive;
+}
+p {
+  font-size: 15px;
 }
 
 a {
@@ -49,11 +55,13 @@ nav.navbar{
   background-color: #FFDF0A;
 }
 .navbar-brand h1 {
+  font-family: sans-serif;
   font-size: 30px;
- font: 'lucida Grande'
   color: white;
 }
-
+a.navbar-item{
+  font-size: 20px;
+}
 
 /********searchbar********/
 
@@ -102,13 +110,13 @@ nav.navbar{
 #searchregion::placeholder
  {
 color: white;
-font-size: 13px;
+font-size: 16px;
 }
 
 .contribute {
   background-color: #34C6C9;
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   padding: 20px;
   border-radius: 3px;
   border: none;
@@ -121,7 +129,7 @@ font-size: 13px;
 
 .maintitle{
   text-align: center;
-  font-size: 30px;
+  font-size: 45px;
   margin-top: 2em;
   margin-bottom: 15px;
 
