@@ -1,6 +1,6 @@
 /*color:
 yellow :#e5e358;
-red: #ce1d53;
+red: #D11651;
 brown : #795d3e;
 bleu: #634afb;
 turquoise: #34C6C9;*/
@@ -41,11 +41,16 @@ a {
   padding: 15px;
 
 }
+
+.navbar h1 a {
+color: #754830;
+}
 nav.navbar{
-  background-color: #E5E528;
+  background-color: #FFE528;
 }
 .navbar-brand h1 {
-  font-size: 25px;
+  font-size: 30px;
+  color: #AC583B;
 }
 
 
@@ -61,13 +66,13 @@ nav.navbar{
   height: 50px;
 }
 #searchname {
-  background-color: #65A188;
+  background-color: #D11651;
 }
 #searchcountry {
-  background-color: #505EC6;
+  background-color: #AC583B;
 }
 #searchregion {
-  background-color: #FFAD43;
+  background-color: #634afb;
 }
 .filter {
   border-radius: 1px;
@@ -99,7 +104,7 @@ font-size: 13px;
 }
 
 .contribute {
-  background-color: #B9085C;
+  background-color: #34C6C9;
   color: white;
   font-size: 20px;
   padding: 20px;
@@ -115,7 +120,7 @@ font-size: 13px;
 .maintitle{
   text-align: center;
   font-size: 30px;
-  margin-top: 15px;
+  margin-top: 2em;
   margin-bottom: 15px;
 
 }

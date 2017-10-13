@@ -13,11 +13,11 @@ const User = require('./models/user');
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
+require("dotenv").config();
 
-mongoose.connect('mongodb://localhost/dynamic-map', {
+mongoose.connect(process.env.MONGODB_URI, {
 	useMongoClient: true,
 });
-
 const app = express();
 
 // view engine setup
