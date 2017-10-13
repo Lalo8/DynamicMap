@@ -60,6 +60,7 @@ nav.navbar{
 .searchbar {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .searchbar a {
