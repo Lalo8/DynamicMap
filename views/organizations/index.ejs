@@ -8,8 +8,8 @@
 		<% organizations.forEach((organization) => {%>
 		<% if (organization.status === "accepted") {%>
 		<ul>
-			<li><a href="/organizations/<%=organization.id%>">
-				<label for="">Name: </label><%=organization.name%> </a></li>
+			<li>
+				<label for="">Name: </label><%=organization.name%></li>
 			<li><label for="">Description: </label><%=organization.description%></li>
 			<li><label for="">Email: </label><%=organization.contacts.email%></li>
 			<li><label for="">Phone: </label><%=organization.contacts.phone%></li>

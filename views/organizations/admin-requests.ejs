@@ -10,8 +10,7 @@
 			<% organizations.forEach((organization) => {%>
 			<% if (organization.status === "pending") { %>
 			<ul>
-				<li><a href="/organizations/<%=organization.id%>">
-					Name: <%=organization.name%> </a></li>
+				<li>Name: <%=organization.name%></li>
 				<li>Description: <%=organization.description%></li>
 				<li>Email: <%=organization.contacts.email%></li>
 				<li>Phone: <%=organization.contacts.phone%></li>
@@ -40,5 +39,3 @@
 	</div>
 	<% } %>
 </div>
-
-
