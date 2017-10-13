@@ -13,11 +13,11 @@ const User = require('./models/user');
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
+require("dotenv").config();
 
-mongoose.connect('mongodb://heroku_w3bxd9nq:jafg9bm8l4t86d5ff3bch8i0td@ds119685.mlab.com:19685/heroku_w3bxd9nq', {
+mongoose.connect(process.env.MONGODB_URI, {
 	useMongoClient: true,
 });
-
 const app = express();
 
 // view engine setup
