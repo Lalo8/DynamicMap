@@ -1,15 +1,14 @@
 <div class="container">
+	<% if (user.isAdmin ) { %>
 	<div class="titlerequest">
 		<h2>Organization's requests</h2>
-		<% if (user.isAdmin ) { %>
 		<h3>It's time to work ! Take a look at our contributors' requests:</h3>
-		<% } %>
 	</div>
 
 	<div class="requestdetails">
 		<ul>
 			<% organizations.forEach((organization) => {%>
-			<% if (user.isAdmin && organization.status === "pending") { %>
+			<% if (organization.status === "pending") { %>
 			<ul>
 				<li><a href="/organizations/<%=organization.id%>">
 					Name: <%=organization.name%> </a></li>
@@ -39,4 +38,7 @@
 			<% }) %>
 		</ul>
 	</div>
+	<% } %>
 </div>
+
+
