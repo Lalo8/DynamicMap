@@ -1,14 +1,12 @@
 	<% if ( user.isAdmin) { %>
-	<div class="navbar-end">
-		<div class="navbar-item">
-			<a href="/organizations/admin-requests" class="navbar-item is-info"><p class="subtitle">Please, don't forget to check requests!</p></a>
-		</div>
-	</div>
-	<% } %>
-<div class="container">
-	<h2 class="title"> Hello, <%= user.username%> </h2>
 
-	<h3 class="subtitle">Your organizations:</h3>
+<div class="container">
+	<h2 class="logintitle"> Hello, <%= user.username%> ! </h2>
+
+	<h3 class="loginsubtitle">Your organizations</h3>
+  <h4 class="center" style="font-style:italic">Here you can either update your spots or delete them if they no longer exist</h4>
+
+
 
 	<div class="requestdetails">
 		<ul>
@@ -40,5 +38,4 @@
 		</ul>
 	</div>
 </div>
-
-	<% } %>
+		<% } %>

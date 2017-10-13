@@ -28,7 +28,7 @@ a {
 
 /*********navbar/sidebar*********/
 
-.sidebar{
+/*.sidebar{
   position: fixed;
   flex-direction: column;
   height: 100%;
@@ -36,11 +36,14 @@ a {
   background-color: #34C6C9;
   z-index: 28;
   margin-top : 0px;
-}
+}*/
 .navbar{
   padding: 15px;
-}
 
+}
+nav.navbar{
+  background-color: #E5E528;
+}
 .navbar-brand h1 {
   font-size: 25px;
 }
@@ -202,6 +205,13 @@ margin: 30px;
 .center{
 text-align: center;
 margin: 10px;
+}
+
+input, select, textarea {
+  color: white;
+}
+textarea:focus, input:focus {
+    color: white;
 }
 
 /***************form ****************/
