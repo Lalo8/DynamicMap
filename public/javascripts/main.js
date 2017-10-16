@@ -21,8 +21,11 @@ let markers = [];
 function putMarkers(arr){
 	arr.forEach(function(organization){
 		if(organization.status === "accepted"){
+			// info window
 			let title = organization.name;
-      let country = organization.country;
+			let snippet = organization.address.city;
+
+      		//let country = organization.address.country;//???
 			let position = {
 				lat: organization.location.coordinates[1],
 				lng: organization.location.coordinates[0],
