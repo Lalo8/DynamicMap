@@ -209,7 +209,7 @@ margin: 10px;
 }
 
 .buttonrequest{
-  display: flex;
+  /*display: flex;*/
   flex-direction: row;
 }
 
